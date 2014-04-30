@@ -1,19 +1,41 @@
+<html>
+<head>
+    <title>zkValidation example usage</title>
+</head>
+<body>
+    
+<h1>zkValidation example usage</h1>
+
 <!-- Example form with validation directives -->
 <form ng-submit="editProfile()" name="accountForm" 
     validation-rule="account" 
     validation-run-after="getProfile">
     
     <input type="text" ng-model='user.first_name' name="first_name" validate="">
+    <br>
     
     <input type="text" ng-model='user.last_name' name="last_name" validate="">
+    <br>
     
     <select ng-options="c.id as c.name for c in countries" ng-model="user.country" name="country"  validate=""></select>
+    <br>
     
     <input type="tel" ng-model='user.phone_number' name="phone_number" validate="">
+    <br>
+    
+    <input type="checkbox" ng-model="form.accept_terms" name="accept_terms" validate="">
+    <br>
     
     <button type="submit" validation-submit="saveRequest,true" 
         ng-disabled="accountForm.$invalid || accountForm.$submitInProgress">{{lang.save}}</button>
-        
-    <input type="checkbox" ng-model="form.accept_terms" name="accept_terms" validate="">
     
 </form>
+
+<!-- Scripts -->
+<script src="https://code.angularjs.org/1.2.16/angular.min.js"></script>
+<script src="services.js"></script>
+<script src="directives.js"></script>
+
+</body>
+
+</html>
