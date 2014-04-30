@@ -1,0 +1,32 @@
+{
+    "validation": {
+        "first_name": [
+            {
+                "msg": "required"
+            }
+        ],
+        "last_name": [
+            {
+                "msg": "required"
+            }
+        ],
+        "phone_number": [
+            {
+                "msg": "numeric"
+            }
+        ],
+        "mobile_number": [
+            {
+                "msg": "numeric"
+            }
+        ],
+        "country": [
+            {
+                "msg": "required"
+            },
+            {
+                "msg": "numeric"
+            }
+        ]
+    }
+}
