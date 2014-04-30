@@ -2,7 +2,7 @@
 <head>
     <title>zkValidation example usage</title>
 </head>
-<body>
+<body ng-controller="example">
     
 <h1>zkValidation example usage</h1>
 
@@ -27,12 +27,14 @@
     <br>
     
     <button type="submit" validation-submit="saveRequest,true" 
-        ng-disabled="accountForm.$invalid || accountForm.$submitInProgress">{{lang.save}}</button>
+        ng-disabled="accountForm.$invalid || accountForm.$submitInProgress">Save</button>
     
 </form>
 
 <!-- Scripts -->
 <script src="https://code.angularjs.org/1.2.16/angular.min.js"></script>
+<script src="example.js"></script>
+<script src="config.js"></script>
 <script src="services.js"></script>
 <script src="directives.js"></script>
 
