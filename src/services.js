@@ -181,20 +181,6 @@ Validation.service('validationFn', function(appConfig) {
         // use the same regex as the backend
         return inp ? (/^([\w\+\-]+)(\.[\w\+\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/i).test(inp) : true;
     },
-    'callback_email_is_unique': function (inp) {
-        var ret = false;
-        
-        // synchronous call
-        $.ajax({
-            url: appConfig.apiUrl+'/account/email_is_unique/'+inp,
-            type: 'GET',
-            async: false,
-            dataType: 'json',
-            success: function(){ret = true;}
-        });
-        
-        return ret;
-    },
     'callback_domain_is_valid': function (inp) {
         return inp ? (/^([a-z0-9]+)([\-\.]{1}[a-z0-9]+)*\.[a-z]+$/i).test(inp) : true;
     },
@@ -203,21 +189,6 @@ Validation.service('validationFn', function(appConfig) {
     },
     'callback_cron_jobs_selected_entire_time_is_valid': function (inp) {
         return inp ? (/^(([\d\*\.\/]+),){4}([\d\*\.\/]+)$/).test(inp) : true;
-    },
-    'callback_check_password_dictionary': function (inp) {
-        var ret = false;
-
-        // synchronous call
-        $.ajax({
-            url: appConfig.apiUrl+'/email/check_password_dictionary/',
-            type: 'POST',
-            data: {'password': inp},
-            async: false,
-            dataType: 'json',
-            success: function(){ret = true;}
-        });
-        
-        return ret;
     },
     'callback_has_symbols': function (inp) {
         return inp ? (/[\!\@\#\$\%\^\&\*\(\)\:\"\;\'\{\}\[\]\,\.\/<\>\?\`\~\\]/).test(inp) : true;
