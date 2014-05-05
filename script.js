@@ -5,4 +5,6 @@ var app = angular.module('Example', ['Validation']);
  */
 app.controller('example', function() {
     
+    console.log(1);
+    
 });

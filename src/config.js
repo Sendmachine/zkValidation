@@ -3,5 +3,5 @@
  */
 Validation.value('appConfig', {
     // validation resource
-    validationUrl: '/validation'
+    validationUrl: ''
 });
