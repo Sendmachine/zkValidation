@@ -11,7 +11,7 @@
 <br>
 
 <!-- Example form with validation directives -->
-<form ng-submit="editProfile()" name="accountForm" 
+<form ng-submit="editProfile(user)" name="accountForm" 
     validation-rule="rules.json" 
     validation-run-after="getProfile">
     
@@ -41,7 +41,7 @@
     
     <label>
         Accept terms
-        <input type="checkbox" ng-model="form.accept_terms" name="accept_terms" validate="">
+        <input type="checkbox" ng-model="user.accept_terms" name="accept_terms" validate="">
     </label>
     <br>
     

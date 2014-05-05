@@ -20,7 +20,9 @@ app.controller('example', function($scope, $http, $rootScope) {
         }
     ];
     
-    //~$scope.saveRequest = $http.save('.');
+    $scope.editProfile = function(data) {
+        $scope.saveRequest = $http.post('.', data);
+    };
     
     $rootScope.lang = {
         "validation": {
