@@ -28,7 +28,10 @@ var paths = {
  */
 gulp.task('scripts', function() {
   return gulp.src(paths.scripts)
-    .pipe(uglify())
+    .pipe(uglify({
+        mangle: false,
+        compress: false
+    }))
     .pipe(concat('zkValidation.min.js'))
     .pipe(gulp.dest('build'));
 });
