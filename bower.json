@@ -1,0 +1,12 @@
+{
+  "name": "zkValidation",
+  "version": "1.0",
+  "license": "MIT",
+  "description": "AngularJS validation module used by Zooku",
+  "keywords": ["validation", "angularjs"],
+  "homepage": "https://github.com/Sendmachine/zkValidation",
+  "main": "./build/zkValidation.min.js",
+  "dependencies": {
+    "angular": "1.2.16"
+  }
+}
