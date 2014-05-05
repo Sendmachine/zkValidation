@@ -5,32 +5,49 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
 </head>
 
-<body ng-controller="example">
+<body ng-controller="example" class="container">
 
 <h1>zkValidation example usage</h1>
+<br>
 
 <!-- Example form with validation directives -->
 <form ng-submit="editProfile()" name="accountForm" 
     validation-rule="rules.json" 
     validation-run-after="getProfile">
     
-    <input type="text" ng-model='user.first_name' name="first_name" validate="">
+    <label>
+        First name
+        <input type="text" ng-model='user.first_name' name="first_name" validate="" class="form-control">
+    </label>
     <br>
     
-    <input type="text" ng-model='user.last_name' name="last_name" validate="">
+    <label>
+        Last name
+        <input type="text" ng-model='user.last_name' name="last_name" validate="" class="form-control">
+    </label>
     <br>
     
-    <select ng-options="c.id as c.name for c in countries" ng-model="user.country" name="country"  validate=""></select>
+    <label>
+        Country
+        <select ng-options="c.id as c.name for c in countries" ng-model="user.country" name="country"  validate="" class="form-control"></select>
+    </label>
     <br>
     
-    <input type="tel" ng-model='user.phone_number' name="phone_number" validate="">
+    <label>
+        Phone number
+        <input type="tel" ng-model='user.phone_number' name="phone_number" validate="" class="form-control">
+    </label>
     <br>
     
-    <input type="checkbox" ng-model="form.accept_terms" name="accept_terms" validate="">
+    <label>
+        Accept terms
+        <input type="checkbox" ng-model="form.accept_terms" name="accept_terms" validate="">
+    </label>
     <br>
     
     <button type="submit" validation-submit="saveRequest,true" 
-        ng-disabled="accountForm.$invalid || accountForm.$submitInProgress">Save</button>
+        ng-disabled="accountForm.$invalid || accountForm.$submitInProgress"
+        class="btn btn-primary">Save</button>
     
 </form>
 

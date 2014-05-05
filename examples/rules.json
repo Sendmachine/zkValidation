@@ -10,22 +10,22 @@
                 "msg": "required"
             }
         ],
-        "phone_number": [
-            {
-                "msg": "numeric"
-            }
-        ],
-        "mobile_number": [
-            {
-                "msg": "numeric"
-            }
-        ],
         "country": [
             {
                 "msg": "required"
             },
             {
                 "msg": "numeric"
+            }
+        ],
+        "phone_number": [
+            {
+                "msg": "numeric"
+            }
+        ],
+        "accept_terms": [
+            {
+                "msg": "required"
             }
         ]
     }
