@@ -1,3 +1,14 @@
-.validation-error {
-    background-color: #FFD8D8;
+.validation-error { 
+    background:#fff3f3;
+    border:1px solid #ff9090;
+}
+
+.validation-error:focus {
+    border:solid 1px #f29191;
+    -webkit-box-shadow:0 0 5px #f29191;
+    -moz-box-shadow:0 0 5px #f29191;
+    -o-box-shadow:0 0 5px #f29191;
+    -ms-box-shadow:0 0 5px #f29191;
+    box-shadow:0 0 5px #f29191;
+    background:#fff;
 }
