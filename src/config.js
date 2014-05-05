@@ -1,4 +1,7 @@
-app.value('appConfig', {
+/**
+ * Validation module configuration
+ */
+Validation.value('appConfig', {
     // validation resource
     validationUrl: '/validation'
 });
