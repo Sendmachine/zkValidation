@@ -16,15 +16,19 @@
     validation-rule="rules.json" 
     validation-run-after="getProfile">
     
+    The form validation rules are fetched from the backend/API.
+    <br> 
+    <br> 
+    
     <label>
-        First name
-        <input type="text" ng-model='user.first_name' name="first_name" validate="" class="form-control">
+        Email
+        <input type="text" ng-model='user.email' name="email" validate="" class="form-control">
     </label>
     <br>
     
     <label>
-        Last name
-        <input type="text" ng-model='user.last_name' name="last_name" validate="" class="form-control">
+        Name
+        <input type="text" ng-model='user.name' name="name" validate="" class="form-control">
     </label>
     <br>
     

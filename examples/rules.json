@@ -1,11 +1,14 @@
 {
     "validation": {
-        "first_name": [
+        "email": [
             {
                 "msg": "required"
+            },
+            {
+                "msg": "valid_email"
             }
         ],
-        "last_name": [
+        "name": [
             {
                 "msg": "required"
             }
@@ -13,9 +16,6 @@
         "country": [
             {
                 "msg": "required"
-            },
-            {
-                "msg": "numeric"
             }
         ],
         "phone_number": [
